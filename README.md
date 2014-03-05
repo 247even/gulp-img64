@@ -4,7 +4,7 @@ Convert and replace image-files within your DOM/HTML to base64-encoded data.
 
 ## Example
 
-#### `gulpfile.js`
+#### gulpfile.js
 
 ```js
 var gulp = require('gulp');
@@ -18,7 +18,7 @@ gulp.task('default', function () {
 ```
 
 
-##### `index.html // Before...`
+##### index.html // Before...
 
 ```js
 <html>
@@ -30,7 +30,7 @@ gulp.task('default', function () {
 ```
 
 
-##### `path/index.html // ...after:`
+##### path/index.html // ...after:
 
 ```html
 <html>
