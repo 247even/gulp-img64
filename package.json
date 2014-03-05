@@ -1,6 +1,6 @@
 {
   "name": "gulp-img64",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Convert and replace image-files within your DOM/HTML to base64-encoded data.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "https://github.com/247even/gulp-img64"
   },
   "keywords": [
-    "gulpplugin, endoding, base64, image, html, DOM"
+    "gulpplugin", "endoding", "base64", "image", "html", "DOM"
   ],
   "author": {
     "name": "247even",
