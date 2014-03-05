@@ -1,6 +1,6 @@
 var assert   = require('assert');
 var gutil    = require('gulp-util');
-var supersede = require('../index');
+var img64 = require('../index');
 var fs       = require('fs');
 var path     = require('path');
 var mime	= require('mime');
