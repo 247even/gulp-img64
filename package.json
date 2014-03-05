@@ -1,6 +1,6 @@
 {
   "name": "gulp-img64",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert and replace image-files within your DOM/HTML to base64-encoded data.",
   "main": "index.js",
   "scripts": {
@@ -36,6 +36,5 @@
   },
   "homepage": "https://github.com/247even/gulp-img64",
   "_id": "gulp-img64@0.0.1",
-  "_from": "gulp-img64@",
-  "readme": "# gulp-img64 [![Build Status](https://travis-ci.org/247even/gulp-img64.png?branch=master)](https://travis-ci.org/247even/gulp-img64)\n\n\n## Example\n\n#### `index.html`\n\n```html\n<html>\n\t<head>\n\t</head>\n\t<body>\n\t\t<div img64=\"helloworld.txt\"> </div>\n...\n```\n\n#### `helloworld.txt`\n```html\nHello World!\n```\n\n#### `gulpfile.js`\n\n```js\nvar gulp = require('gulp');\nvar img64 = require('gulp-img64');\n\ngulp.task('default', function () {\n\tgulp.src('index.html')\n\t\t.pipe(img64())\n\t\t.pipe(gulp.dest('path'));\n});\n```\n\n#### `path/index.html`\n\n```html\n<html>\n\t<head>\n\t</head>\n\t<body>\n\t<!-- img64: helloworld.txt -->\n\tHello World!\n\t<!-- end img64 -->\n...\n```\n\n\n\n### License\n\nMIT © 247even\n"
+  "_from": "gulp-img64@"
 }
