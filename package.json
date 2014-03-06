@@ -1,6 +1,6 @@
 {
   "name": "gulp-img64",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Convert and replace image-files within your DOM/HTML to base64-encoded data.",
   "main": "index.js",
   "scripts": {
