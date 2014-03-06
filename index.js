@@ -26,7 +26,7 @@ module.exports = function() {
 		if (file.isBuffer()) {
 			var $ = cheerio.load(String(file.contents));
 			$('img').each(function(){
-				if(this.attr('src') != ""){
+				if(this.attr('src') != "" && typeof this.attr('src') != 'undefined' ){
 					var ssrc = this.attr('src');
 					var spath = path.join(file.base, ssrc);
 					var mtype = mime.lookup(spath);
