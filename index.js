@@ -6,7 +6,8 @@ var fs = require('fs');
 var path = require('path');
 var mime = require('mime');
 
-module.exports = function() {
+module.exports = function(opts) {
+	opts = opts || {}
 
 	// create a stream through which each file will pass
 	return through.obj(function(file, enc, callback) {
@@ -29,7 +30,7 @@ module.exports = function() {
 					var ssrc = this.attr('src');
 					var isdata = ssrc.indexOf("data");
 					if (ssrc != "" && typeof ssrc != 'undefined' && isdata !== 0) {
-						var spath = path.join(file.base, ssrc);
+						var spath = path.join(opts.baseDir || file.base, ssrc);
 						var mtype = mime.lookup(spath);
 						if (mtype != 'application/octet-stream') {
 							console.log(mtype);
