@@ -29,7 +29,7 @@ module.exports = function() {
 					var ssrc = this.attr('src');
 					var isdata = ssrc.indexOf("data");
 					if (ssrc != "" && typeof ssrc != 'undefined' && isdata !== 0) {
-						var spath = path.join(file.base, ssrc);
+						var spath = path.join(path.dirname(file.path), ssrc);
 						var mtype = mime.lookup(spath);
 						if (mtype != 'application/octet-stream') {
 							console.log(mtype);
