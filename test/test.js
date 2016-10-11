@@ -29,5 +29,28 @@ describe('gulp-img64', function() {
 
 		});
 
+		it('should support escaped characters in image file names', function(done) {
+
+			var filename = path.join(__dirname, '/fixtures/input with spaces in filename.html');
+
+			var input = new gutil.File({
+				base: path.dirname(filename),
+				path: filename,
+				contents: new Buffer(fs.readFileSync(filename, 'utf8'))
+			});
+
+			var stream = img64();
+
+			stream.on('data', function(newFile) {
+				assert.equal(String(newFile.contents), fs.readFileSync(path.join(__dirname, '/fixtures/output.html'), 'utf8'));
+				done();
+			});
+
+			stream.write(input);
+
+		});
+
+
+
 	});
 });
