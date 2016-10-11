@@ -33,7 +33,7 @@ module.exports = function() {
 						var mtype = mime.lookup(spath);
 						if (mtype != 'application/octet-stream') {
 							console.log(mtype);
-							var sfile = fs.readFileSync(spath);
+							var sfile = fs.readFileSync(unescape(spath));
 							var simg64 = new Buffer(sfile).toString('base64');
 							this.attr('src', 'data:' + mtype + ';base64,' + simg64);
 						}
